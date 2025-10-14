@@ -2,9 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - Prints a message using puts
+ * main - Entry point
  *
- * Return: 0 (success)
+ * Description: Prints "Programming is like building a multilingual puzzle"
+ *              followed by a new line using puts function.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

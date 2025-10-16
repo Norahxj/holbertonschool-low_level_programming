@@ -1,19 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Prints all single digit numbers of base 10 starting from 0
+ * main - Prints the alphabet in lowercase except 'q' and 'e'
  *
- * Description: Uses only putchar to print 0 to 9 followed by a new line.
- *
- * Return: 0 on success
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
+	char c;
 
-	for (n = 0; n < 10; n++)
-		putchar(n + '0');
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		if (c == 'q' || c == 'e')
+			continue;
+		putchar(c);
+	}
 	putchar('\n');
-
 	return (0);
 }

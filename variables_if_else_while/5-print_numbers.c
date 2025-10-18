@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 /**
-*
 * main - digits from 0 to 10
 *
 * Description: print all single digits numbers

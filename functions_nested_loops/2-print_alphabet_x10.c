@@ -1,18 +1,19 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - prints the alphabet in lowercase 10 times
+ * print_alphabet_x10 - prints the alphabet 10 times in lowercase
  *
- * Description: prints letters 'a' to 'z' 10 times, each followed by a new line
+ * Description: uses only 2 _putchar calls to print all letters and new lines
  */
 void print_alphabet_x10(void)
 {
-	int i, c;
+	int i, j;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (c = 'a'; c <= 'z'; c++)
-			_putchar(c);
+		j = 'a';
+		while (j <= 'z')
+			_putchar(j++);
 		_putchar('\n');
 	}
 }

@@ -1,11 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Prototype for _putchar (provided by the school) */
 int _putchar(char c);
-
-/* Add your function prototypes here */
-/* Example prototype: */
 void print_alphabet(void);
+void print_alphabet_x10(void); /* <<< Add this line */
 
 #endif /* MAIN_H */

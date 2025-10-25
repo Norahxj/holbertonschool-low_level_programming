@@ -1,13 +1,14 @@
 #include "main.h"
 /**
- * Print_line - printing a straight line
+ * print_line - printing a straight line
  *
- * Description: (n) is the number of times to print _
+ * @n: is the number of times to print _
  */
 void print_line(int n)
 {
-	int n;
+	int i;
 
-	for (n = 0; n <= 0; n++)
-		_putchar(_'\n');
+	for (i = 0; i <= n; i++)
+		_putchar('_');
+	_putchar('\n');
 }

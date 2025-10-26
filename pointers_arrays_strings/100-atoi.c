@@ -5,7 +5,7 @@
  *
  * Return: the integer value
  */
-int _atoi(char *s);
+int _atoi(char *s)
 {
 	int i = 0, sign = 1, num = 0;
 	int found = 0;

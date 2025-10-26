@@ -3,7 +3,7 @@
  * rev_string - reverses a string
  * @s: pointer to the string to reverse
  */
-void rev_string(char *s);
+void rev_string(char *s)
 {
 	int i, length = 0;
 	char temp;

@@ -7,31 +7,23 @@
  */
 char *cap_string(char *s)
 {
-	int i = 0;
-	int capitalize = 1;
+	int i = 0, cap = 1;
+	char sep[] = " \t\n,;.!?\"(){}";
+	int j;
 
 	while (s[i] != '\0')
 	{
-		if (capitalize && s[i] >= 'a' && s[i] <= 'z')
-		{
-			s[i] = s[i] - ('a' - 'A');
-			capitalize = 0;
-		}
-		else if ((s[i] >= 'A' && s[i] <= 'Z') && !capitalize)
-		{
-			s[i] = s[i] + ('a' - 'A');
-		}
+		if (cap && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
 
-		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ',' ||
-				s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?' ||
-				s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' ||
-				s[i] == '}')
+		cap = 0;
+		for (j = 0; sep[j] != '\0'; j++)
 		{
-			capitalize = 1;
-		}
-		else
-		{
-			capitalize = 0;
+			if (s[i] == sep[j])
+			{
+				cap = 1;
+				break;
+			}
 		}
 		i++;
 	}

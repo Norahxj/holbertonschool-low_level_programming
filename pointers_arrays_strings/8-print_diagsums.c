@@ -5,7 +5,7 @@
  * @a: pointer to the first element of the matrix
  * @size: the size of the square matrix (number of rows/columns)
  */
-void print_diagsums(int *a, int size);
+void print_diagsums(int *a, int size)
 {
 	int i;
 	int sum1 = 0, sum2 = 0;

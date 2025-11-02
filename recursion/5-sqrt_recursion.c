@@ -1,27 +1,27 @@
 #include "main.h"
 /**
+ * find_root - helper to find the natural square root recursively
+ * @n: number to find the square root of
+ * @i: current guess
+ * Return: natural square root or -1
+ */
+int find_root(int n, int i)
+{
+	if (i * i == n)
+		return (i);
+	if (i * i > n)
+		return (-1);
+	return (find_root(n, i + 1));
+}
+
+/**
  * _sqrt_recursion - returns the natural square root of a number
- * @n: character
+ * @n: number
  * Return: natural square root or -1
  */
 int _sqrt_recursion(int n)
 {
-	int i = 0;
-
 	if (n < 0)
 		return (-1);
-	if (i * i == n)
-	{
-		int result = i;
-
-		i = 0;
-		return (result);
-	}
-	if (i * i > n)
-	{
-		i = 0;
-		return (-1);
-	}
-	i++;
-	return (0);
+	return (find_root(n, 0));
 }

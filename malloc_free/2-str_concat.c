@@ -6,7 +6,7 @@
  * @s2: second string
  * Return: NULL on failure
  */
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
 	char *new_str;
 	int i, j;

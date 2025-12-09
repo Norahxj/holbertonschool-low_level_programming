@@ -7,8 +7,6 @@
  * @value: The value associated with the key (will be duplicated)
  *
  * Return: 1 if it succeeded, 0 otherwise
- *
- * Description: If the key already exists, updates its value.
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -22,7 +20,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	value_copy = strdup(value);
 	if (!value_copy)
 		return (0);
-
 	index = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[index];
 
@@ -36,7 +33,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		current = current->next;
 	}
-
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
 	{
@@ -51,9 +47,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	node->value = value_copy;
-
 	node->next = ht->array[index];
 	ht->array[index] = node;
-
 	return (1);
 }
